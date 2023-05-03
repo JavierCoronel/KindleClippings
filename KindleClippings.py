@@ -64,7 +64,7 @@ def prepare_pdf_document(highlights: str, include_clip_meta = False, title: str 
     pdf_file.set_font("lisboa", '', 22)
     pdf_file.set_margins(25, 40, 25)
     pdf_file = insert_line_break_in_pdf(pdf_file, 3)
-    pdf_file.multi_cell(0, 5, title, align="C")
+    pdf_file.multi_cell(0, 8, title, align="C")
     pdf_file = insert_line_break_in_pdf(pdf_file, 2)
     
     meta_regex_pattern = r"(Your.*\| Added on)"
@@ -83,7 +83,7 @@ def prepare_pdf_document(highlights: str, include_clip_meta = False, title: str 
         else:
             pdf_file.set_font("lisboa", '', 15)
             pdf_file.set_text_color(0, 0, 0)
-            pdf_file.multi_cell(0, 5, highlight_line, 0)
+            pdf_file.multi_cell(0, 7, highlight_line, 0)
 
     return pdf_file
 
