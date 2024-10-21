@@ -1,2 +1,5 @@
 FPDF
 python-docx
+pandas
+fire
+tqdm
